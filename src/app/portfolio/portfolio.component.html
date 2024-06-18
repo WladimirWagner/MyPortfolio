@@ -1,0 +1,32 @@
+<div class="arrow-left-container"><img src="./assets/img/arrow/arrow_diag_down/arrow_d_right._0.png" alt="" id="portfolio"></div>
+
+<div class="portfolio-header-container" >
+  <h2>Portfolio</h2>
+  <h3>Feel free to try out my latest development projects and look into their code.</h3>
+</div>
+
+<div class="project-container">
+  
+  <div *ngFor="let project of portfolio; let i = index" class="project" [ngClass]="{'even': i % 2 === 0, 'odd': i % 2 !== 0}">
+
+    <span class="project-count" [ngClass]="{'even': i % 2 === 0, 'odd': i % 2 !== 0}">0{{ i+1 }}/0{{ portfolio.length }}</span>
+    
+    <div class="project-img-container" >
+      <img src="{{ project.img }}" alt="PROJECT">
+      <img [ngClass]="{'even': i % 2 === 0, 'odd': i % 2 !== 0}" src="./assets/img/projects/img_effects/rectangle.png" alt="RECTANGLE">
+      <img [ngClass]="{'even': i % 2 === 0, 'odd': i % 2 !== 0}" src="./assets/img/projects/img_effects/arrow_small.png" alt="CIRCLE">
+    </div>
+    
+
+    <div class="project-details-container">
+        <div class="project-details" [ngClass]="{'even': i % 2 === 0, 'odd': i % 2 !== 0}">
+          <h3>{{ project.name }}</h3>
+          <h4>{{ project.stack }}</h4>
+          <span>{{ project.description }}</span>
+          <button><a href="{{ project.link }}">Test</a></button>
+        </div>
+    </div>
+
+       
+  </div>
+</div>

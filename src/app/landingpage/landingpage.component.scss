@@ -1,0 +1,169 @@
+@use './../../mixins.scss' as *;
+
+.landingpage-container {
+  padding-top: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  >h1 {
+    font-size: 6.5rem;
+    font-weight: 800;
+  }
+  >div {
+    display: flex;
+    align-items: center;
+    >div {
+      background-color: black;
+      height: 0.2rem;
+      width: 28rem;
+      margin-right: 8px;
+    }
+    >span {
+      font-size: 2.5rem;
+      font-weight: 700;
+      font-family: 'Overpass';
+      color: $main-color;
+    }
+  }
+}
+
+.second-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 140px;
+  font-size: 1.3rem;
+  font-family: 'Overpass';
+  font-weight: 300;
+
+  >div:nth-child(1) {  
+    transform: rotate(-90deg);
+
+    >a {
+      color: black;
+
+      &:hover {
+        color:  $main-color;
+      }
+    }
+  }
+  >div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1070px) {
+  .landingpage-container {
+    padding-top: 0px;
+    height: 100vh;
+    justify-content: center;
+    gap: 160px;
+  }
+
+  .header-container {
+    >h1 {
+      font-size: 5rem;
+    }
+
+    >div {
+      >div {
+        width: 20rem;
+      }
+      >span {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .second-container {
+    padding-top: 0px;
+    font-size: 1.1rem;
+  
+  }
+}
+
+@media (max-width: 700px) {
+  .header-container {
+    >h1 {
+      font-size: 3rem;
+    }
+
+    >div {
+      >div {
+        width: 10rem;
+      }
+      >span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .second-container {
+    font-size: 1rem;
+
+    >div:nth-child(2) {
+      >img {
+        height: 100px;
+      }
+
+      >span {
+        font-size: .8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    >h1 {
+      font-size: 2rem;
+    }
+
+    >div {
+      >div {
+        width: 6rem;
+        height: 0.1rem;
+      }
+      >span {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .second-container {
+    font-size: 1rem;
+
+    >div:nth-child(1) {  
+      transform: rotate(-90deg);
+  
+      >a {
+        font-size: .7rem;
+  
+        &:hover {
+          color:  $main-color;
+        }
+      }
+    }
+
+    >div:nth-child(2) {
+      >img {
+        height: 80px;
+      }
+
+      >span {
+        font-size: .6rem;
+      }
+    }
+  }
+
+}
+
+

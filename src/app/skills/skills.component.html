@@ -1,0 +1,10 @@
+<div class="arrow-right-container"><img src="./assets/img/arrow/arrow_diag_down/arrow_d_left_0.png" alt="" id="skills"></div>
+<div class="box" >
+  <h2>My skills</h2>
+  <div class="skill-container">
+    <div *ngFor="let icon of skillIcons">
+      <img  src="{{ icon.src }}" alt="">
+      <span>{{ icon.name }}</span>
+    </div>
+  </div>
+</div>

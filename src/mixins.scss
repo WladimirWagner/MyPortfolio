@@ -1,0 +1,150 @@
+$main-color: #FF9900;
+$second-color: #FFFCF3;
+
+@mixin h2-style {
+  cursor: default;
+  font-size: 3.8rem;
+  font-weight: 800;
+  &:hover {
+    color: $main-color;
+  }
+}
+
+@mixin btn-portfolio {
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 160px;
+  padding: 20px 60px;
+  border: 4px solid #000000;
+
+  &:hover {
+    font-weight: bold;
+    transition: all 100ms;
+    
+    border: 4px solid $main-color;
+    width: 200px;
+
+    >a {
+      color: $main-color;
+    }
+  }
+}
+
+@mixin project {
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  &.even {
+    flex-direction: row;
+
+    &:hover {
+      .project-details {
+        visibility: visible;
+        display: flex;
+        transition: right 500ms ease-in-out;
+        right: 0;
+        
+      }
+    }
+  }
+
+  &.odd {
+    flex-direction: row-reverse;
+
+    &:hover {
+      .project-details {
+        visibility: visible;
+        display: flex;
+        transition: left 500ms ease;
+        left: 0;
+      }
+    }
+  }
+
+  &:hover {
+    .project-img-container {
+      >img {
+      filter: none;
+      }
+
+      >img:nth-child(2) {
+        display: block;
+      }
+  
+      >img:nth-child(3) {
+        visibility: visible;
+        transition: all 500ms ease;
+        
+  
+        &.even {
+          transform: rotate(-135deg) scale(1.5);
+        }
+      
+        &.odd {
+          transform: rotate(135deg) scale(1.5);
+        }
+      }
+    }
+  }
+}
+
+@mixin project-details {
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  top: 50px;
+  width: 500px;
+  flex-direction: column;
+  gap: 16px;
+
+  &.even {
+    right: 50%;
+  }
+
+  &.odd {
+    left: 50%;
+  }
+
+  >h3 {
+    font-size: 2.3rem;
+    font-family: 'Syne';
+    font-weight: 800;
+    
+  }
+
+  >h4 {
+    font-size: 1.2rem;
+    font-family: 'Overpass';
+    color: $main-color;
+  }
+
+  >span {
+    font-family: 'Overpass';
+  }
+}
+
+@mixin arrow-animation {
+  transition: all 125ms;
+  
+}
+
+@media (max-width: 1070px) {
+  @mixin h2-style {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  @mixin h2-style {
+    font-size: 2rem;
+  }
+
+}
+@media (max-width: 480px) {
+  @mixin h2-style {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,156 @@
+@use './../../mixins.scss' as *;
+
+.aboutme-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 100px;
+
+  >div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 600px;
+
+    >h2 {
+      @include h2-style();
+    }
+    >span {
+      padding-top: 16px;
+      >p {
+        font-size: 1.3rem;
+        font-family: 'Overpass';
+      }
+    }
+    >div {
+      padding-top: 32px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  >div:nth-child(2) {
+    position: relative;
+
+    &:hover {
+      >img:nth-child(2) {
+        display: block;
+      }
+    }
+
+    >img:nth-child(1) {
+      margin-top: 80px;
+      height: 400px;
+    }
+    
+    >img:nth-child(2) {
+      display: none;
+      position: absolute;
+      margin-top: 80px;
+      height: 400px;
+      top: 15px;
+      left: 15px;
+    }
+  }
+}
+
+@media (max-width: 1070px) {
+  .aboutme-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 50px;
+  
+    >div:nth-child(1) {
+      >h2 {
+        font-size: 2.5rem;
+      }
+      >span {
+        >p {
+          font-size: 1.2rem;
+
+        }
+      }
+    }
+  
+    >div:nth-child(2) { 
+      >img:nth-child(1) {
+        margin-top: 60px;
+        height: 350px;
+      }
+      
+      >img:nth-child(2) {
+        margin-top: 60px;
+        height: 350px;
+
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .aboutme-container {
+    gap: 24px;
+    padding-top: 0;
+  
+    >div:nth-child(1) {
+      >h2 {
+        font-size: 2rem;
+      }
+      >span {
+        >p {
+          font-size: .8rem;
+        }
+      }
+    }
+  
+    >div:nth-child(2) { 
+      >img:nth-child(1) {
+        margin-top: 60px;
+        height: 250px;
+      }
+      
+      >img:nth-child(2) {
+        margin-top: 60px;
+        height: 250px;
+        top: 8px;
+        left: 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutme-container {
+    gap: 16px;
+  
+    >div:nth-child(1) {
+      gap: 0px;
+      >h2 {
+        font-size: 1.4rem;
+      }
+      >span {
+        >p {
+          font-size: .7rem;
+        }
+      }
+      >div {
+        padding-top: 16px;
+      }
+    }
+  
+    >div:nth-child(2) { 
+      >img:nth-child(1) {
+        margin-top: 60px;
+        height: 150px;
+      }
+      
+      >img:nth-child(2) {
+        margin-top: 60px;
+        height: 150px;
+        top: 4px;
+        left: 4px;
+      }
+    }
+  }
+}

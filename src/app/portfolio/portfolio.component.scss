@@ -1,0 +1,479 @@
+@use './../../mixins.scss' as *;
+
+.portfolio-header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+
+  h2 {
+    @include h2-style();
+    padding-bottom: 16px;
+  }
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 70px;
+  width: 100%;
+}
+
+.project {
+  @include project();
+}
+
+.project-img-container {
+  position: relative;
+  display: flex;
+  z-index: 100;
+
+  >img:nth-child(1) {
+    height: 350px;
+    filter: grayscale(100%) contrast(120%) brightness(95%);
+  }
+
+  >img:nth-child(2) {
+    display: none;
+    position: absolute;
+    height: 350px;
+    top: 15px;
+
+    &.even {
+      left: 15px;
+    }
+  
+    &.odd {
+     right: 15px;
+    }
+
+  }
+
+  >img:nth-child(3) {
+    visibility: hidden;
+    position: absolute;
+    height: 60px;
+    bottom: calc(50% - 40px);
+
+    &.even {
+      right: -44px;
+    }
+  
+    &.odd {
+     left: -42px;
+    }
+  }
+}
+
+.project-count {
+  position: absolute;
+  font-family: 'Syne';
+  font-weight: 700;
+  font-size: 3rem;
+
+  &.even {
+    top: 0;
+    right: 0;
+  }
+
+  &.odd {
+    top: 0;
+    left: 0;
+  }
+} 
+
+.project-details {
+  @include project-details();
+}
+
+button {
+  @include btn-portfolio();
+}
+
+@media (max-width: 1310px) {
+  .project-img-container {
+    >img:nth-child(1) {
+      height: 300px;
+    }
+  
+    >img:nth-child(2) {
+      height: 300px; 
+    }
+  
+    >img:nth-child(3) {
+      height: 40px;
+      bottom: -35px;
+  
+      &.even {
+        right: 10%;
+        
+      }
+    
+      &.odd {
+       left: 10%;
+      }
+    }
+  }
+
+  .project-details {
+    width: 450px;
+  }
+}
+
+
+
+@media (max-width: 1070px) {
+  .portfolio-header-container {
+    padding-bottom: 100px;
+  
+    >h2 {
+      font-size: 2.5rem;
+    }
+
+    >h3 {
+      font-size: 1rem;
+    }
+  }
+
+  .project-container {
+    display: grid;
+    justify-content: center;
+    gap: 0px;
+    width: 100%;
+  }
+
+  .project {
+    flex-direction: column;
+    gap: 340px;
+  
+    &.even {
+      flex-direction: column;
+  
+      &:hover {
+        .project-details {
+          transition: top 500ms ease-in-out;
+          left: 0%;
+          top: 390px;
+        }
+      }
+    }
+  
+    &.odd {
+      flex-direction: column;
+  
+      &:hover {
+        .project-details {
+          transition: top 500ms ease-in-out;
+          right: 0%;
+          top: 390px;
+        }
+      }
+    }
+  
+    &:hover {
+      .project-img-container {
+      
+        >img:nth-child(3) {
+          visibility: visible;
+          transition: all 500ms ease;
+          
+    
+          &.even {
+            transform: rotate(45deg) scale(1.5);
+          }
+        
+          &.odd {
+            transform: rotate(-45deg) scale(1.5);
+          }
+        }
+      }
+    }
+  }
+
+  .project-img-container {
+    >img:nth-child(1) {
+      height: 350px;
+      filter: grayscale(100%) contrast(120%) brightness(95%);
+    }
+  
+    >img:nth-child(2) {
+      height: 350px; 
+    }
+  
+    >img:nth-child(3) {
+      height: 40px;
+      bottom: -35px;
+  
+      &.even {
+        right: 10%;
+        
+      }
+    
+      &.odd {
+       left: 10%;
+      }
+    }
+  }
+  
+  .project-count {
+    font-size: 2rem;
+  
+    &.even {
+      top: -50px;
+      right: 0;
+    }
+  
+    &.odd {
+      top: -50px;
+      left: 0;
+    }
+  }
+    
+  .project-details {
+    top: 40px;
+    width: 450px;
+    flex-direction: column;
+    gap: 16px;
+  
+    &.even {
+      right: 0%;
+    }
+  
+    &.odd {
+      left: 0%;
+    }
+  
+    >h3 {
+      font-size: 2rem;
+    }
+  
+    >h4 {
+      font-size: 1rem;
+    }
+  }
+
+  button {
+    @include btn-portfolio();
+    font-size: 1rem;
+    width: 140px;
+    padding: 10px 30px;
+  
+    &:hover {
+      width: 180px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .portfolio-header-container {  
+    padding-bottom: 60px;
+    h2 {
+      @include h2-style();
+      font-size: 2rem;
+      padding-bottom: 16px;
+    }
+    >h3 {
+      font-size: .8rem;
+    }
+  }
+
+  .project {
+    gap: 300px;
+  
+    &.even {
+      &:hover {
+        .project-details {
+          left: 0%;
+          top: 240px;
+        }
+      }
+    }
+  
+    &.odd {  
+      &:hover {
+        .project-details {
+          right: 0%;
+          top: 240px;
+        }
+      }
+    }
+  
+    &:hover {
+      .project-img-container {
+      
+        >img:nth-child(3) {
+
+          &.even {
+            transform: rotate(45deg) scale(1.3);
+          }
+        
+          &.odd {
+            transform: rotate(-45deg) scale(1.3);
+          }
+        }
+      }
+    }
+  }
+
+  .project-img-container {
+    >img:nth-child(1) {
+      height: 210px;
+    }
+  
+    >img:nth-child(2) {
+      height: 210px;
+      top: 8px;
+  
+      &.even {
+        left: 8px;
+      }
+    
+      &.odd {
+       right: 8px;
+      }
+    }
+  
+    >img:nth-child(3) {
+      height: 30px;
+      bottom: -22px;
+  
+      &.even {
+        right: 10%;
+        
+      }
+    
+      &.odd {
+       left: 10%;
+      }
+    }
+  }
+  
+  .project-count {
+    font-size: 1.5rem;
+  }
+    
+  .project-details {
+    top: 0px;
+    width: 330px;
+    flex-direction: column;
+    gap: 16px;
+    
+    >h3 {
+      font-size: 1.8rem;
+    }
+  
+    >h4 {
+      font-size: .8rem;
+    }
+  }
+
+  button {
+    @include btn-portfolio();
+    font-size: .8rem;
+    width: 130px;
+    padding: 10px 30px;
+    border: 3px solid #000000;
+  
+    &:hover {
+      width: 160px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-header-container {  
+    h2 {
+      @include h2-style();
+      font-size: 1.4rem;
+      padding-bottom: 16px;
+    }
+    >h3 {
+      font-size: .7rem;
+    }
+  }
+
+  .project {
+    gap: 280px;
+  
+    &.even {
+      &:hover {
+        .project-details {
+          left: 5%;
+          top: 200px;
+        }
+      }
+    }
+  
+    &.odd {  
+      &:hover {
+        .project-details {
+          right: 0%;
+          top: 200px;
+        }
+      }
+    }
+  }
+
+  .project-img-container {
+    >img:nth-child(1) {
+      height: 180px;
+    }
+  
+    >img:nth-child(2) {
+      height: 180px;
+      top: 4px;
+  
+      &.even {
+        left: 4px;
+      }
+    
+      &.odd {
+       right: 4px;
+      }
+    }
+  
+    >img:nth-child(3) {
+      height: 25px;
+      bottom: -16px;
+    }
+  }
+  
+  .project-count {
+    font-size: 1.3rem;
+  }
+    
+  .project-details {
+    top: 0px;
+    width: 270px;
+    flex-direction: column;
+    gap: 16px;
+  
+    &.even {
+      right: 5%;
+    }
+  
+    &.odd {
+      left: 0%;
+    }
+  
+    >h3 {
+      font-size: 1.3rem;
+    }
+  
+    >h4 {
+      font-size: .7rem;
+    }
+  }
+
+  button {
+    @include btn-portfolio();
+    font-size: .7rem;
+    width: 80px;
+    padding: 6px 16px;
+    border: 2px solid #000000;
+  
+    &:hover {
+      width: 100px;
+    }
+  }
+}

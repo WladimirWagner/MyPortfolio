@@ -1,0 +1,358 @@
+@use './../../mixins.scss' as *;
+
+.contact-container {
+  background-color: black;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+  display: flex;
+  flex-direction: column;
+
+  >div {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.css-checkbox { position: absolute; overflow: hidden; clip: rect(0 0 0 0); height: 1px; width: 1px; margin: -1px; padding: 0; border: 0; }#inputPreview { display: flex; gap: 20px; justify-content: center;	}.css-checkbox + label { position: relative; font-size: 14px; cursor: pointer; display: inline-flex; align-items: center; height: 14px; color: rgb(0, 0, 0); }.css-checkbox + label::before { content: " "; display: inline-block; vertical-align: middle; margin-right: 3px; width: 16px; height: 16px; background-color: rgb(255, 153, 0); border-width: 0px; border-style: solid; border-color: rgb(204, 204, 204); border-radius: 2px; box-shadow: none; }.css-checkbox:checked + label::after { content: " "; background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMTI4IDQ0Ny4xVjIyMy4xYzAtMTcuNjctMTQuMzMtMzEuMS0zMi0zMS4xSDMyYy0xNy42NyAwLTMyIDE0LjMzLTMyIDMxLjF2MjIzLjFjMCAxNy42NyAxNC4zMyAzMS4xIDMyIDMxLjFoNjRDMTEzLjcgNDc5LjEgMTI4IDQ2NS42IDEyOCA0NDcuMXpNNTEyIDIyNC4xYzAtMjYuNS0yMS40OC00Ny45OC00OC00Ny45OGgtMTQ2LjVjMjIuNzctMzcuOTEgMzQuNTItODAuODggMzQuNTItOTYuMDJDMzUyIDU2LjUyIDMzMy41IDMyIDMwMi41IDMyYy02My4xMyAwLTI2LjM2IDc2LjE1LTEwOC4yIDE0MS42TDE3OCAxODYuNkMxNjYuMiAxOTYuMSAxNjAuMiAyMTAgMTYwLjEgMjI0Yy0uMDIzNCAuMDIzNCAwIDAgMCAwTDE2MCAzODRjMCAxNS4xIDcuMTEzIDI5LjMzIDE5LjIgMzguMzlsMzQuMTQgMjUuNTlDMjQxIDQ2OC44IDI3NC43IDQ4MCAzMDkuMyA0ODBIMzY4YzI2LjUyIDAgNDgtMjEuNDcgNDgtNDcuOThjMC0zLjYzNS0uNDgwNS03LjE0My0xLjI0Ni0xMC41NUM0MzQgNDE1LjIgNDQ4IDM5Ny40IDQ0OCAzNzZjMC05LjE0OC0yLjY5Ny0xNy42MS03LjEzOS0yNC44OEM0NjMuMSAzNDcgNDgwIDMyNy41IDQ4MCAzMDQuMWMwLTEyLjUtNC44OTMtMjMuNzgtMTIuNzItMzIuMzJDNDkyLjIgMjcwLjEgNTEyIDI0OS41IDUxMiAyMjQuMXoiLz48L3N2Zz4="); background-repeat: no-repeat; background-size: 12px 12px; background-position: center center; position: absolute; display: flex; justify-content: center; align-items: center; margin-left: 0px; left: 0px; top: 0px; text-align: center; background-color: transparent; font-size: 10px; height: 14px; width: 14px; }
+
+h2 {
+  padding: 50px;
+  color: $second-color;
+  font-size: 3.8rem;
+  font-weight: 800;
+  &:hover {
+    color: $main-color;
+  }
+}
+
+form {
+  color: #FFFCF3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 280px;
+  max-width: 610px;
+  padding-top: 24px;
+  gap: 20px;
+  
+
+  >h3 {
+    font-size: 1.5rem;
+    color: $main-color;
+    font-family: 'Overpass';
+  }
+  >p {
+    font-size: 1.2rem;
+    font-family: 'Overpass';
+  }
+
+  >.privacy {
+    position: relative;
+    display: flex;
+
+    flex-direction: column;
+    >div {
+      display: flex;
+      align-items: center;
+      padding-bottom: 24px;
+      >input {
+        padding: 0;
+        width: 20px;
+        margin-right: 8px;
+      }
+
+      >span {
+        >a {
+          color: $main-color;
+        }
+      }
+    }
+    >span {
+      position: absolute;
+      top: 22px;
+      left: 0;
+      margin-top: 6px;
+      color: #E61C40;
+      font-family: 'Overpass';
+    }
+
+  }
+}
+
+input,
+textarea {
+  cursor: pointer;
+  border: none;
+  border-bottom: 0.1rem solid white;
+  background-color: transparent;
+  color: white;
+  padding: 15px 35px;
+  width: 100%;
+  font-size: 1.1rem;
+  font-family: 'Overpass';
+
+  &:hover {
+    border: 0.1rem solid white;
+  }
+}
+
+.input-field {
+  position: relative;
+  width: 100%;
+
+  >div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    top: 27%;
+    right: 8px;
+
+    >span {
+      margin-top: 3px;
+      color: #E61C40;
+      font-family: 'Overpass';
+    }
+  }
+}
+
+.text-field {
+  position: relative;
+  width: 100%;
+
+  >div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    top: 5%;
+    right: 8px;
+
+    >span {
+      margin-top: 1.5px;
+      color: #E61C40;
+      font-family: 'Overpass';
+    }
+  }
+}
+
+textarea {
+  resize: none;
+  height: 200px;
+}
+
+button {
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: 'Overpass';
+  width: 220px;
+  padding: 20px 30px;
+  border: 4px solid white;
+  
+  >a {
+    color: white;
+  }
+
+  &:hover {
+    font-weight: bold;
+    transition: all 100ms;
+    width: 250px;
+  }
+}
+
+@media (max-width: 1070px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  form {
+    padding-top: 24px;
+    padding-inline: 16px;
+    gap: 20px;
+    
+    >h3 {
+      font-size: 1.3rem;
+    }
+    >p {
+      font-size: 1rem;
+    }
+  
+    >.privacy {
+      >div {
+        >input {
+          padding: 0;
+          width: 20px;
+          margin-right: 8px;
+        }
+  
+        >span {
+          font-size: .9rem;
+          >a {
+            color: $main-color;
+          }
+        }
+      }
+      >span {
+        font-size: .9rem;
+      }
+  
+    }
+  }
+  
+  input,
+  textarea {
+    font-size: .9rem;  
+  }
+  
+  .input-field {
+    >div {
+      >span {
+        font-size: .9rem;
+      }
+    
+      >img {
+        height: 16px;
+      }
+    }
+  }
+  
+  .text-field {
+    width: 100%;
+    
+    >div {
+      >span {
+        font-size: .9rem;
+      }
+    
+      >img {
+        height: 16px;
+      }
+    }
+  }
+  
+  textarea {
+    resize: none;
+    height: 200px;
+  }
+  
+  button {
+    font-size: .9rem;
+    width: 140px;
+    padding: 10px 20px;
+    border: 3px solid white;
+      
+    &:hover {
+      width: 180px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  form {
+    >h3 {
+      font-size: 1rem;
+    }
+    >p {
+      font-size: .8rem;
+    }
+  
+    >.privacy {
+      >div {
+        >input {
+          padding: 0;
+          width: 20px;
+          margin-right: 8px;
+        }
+  
+        >span {
+          font-size: .9rem;
+        }
+      }
+      >span {
+        font-size: .9rem;
+      }
+  
+    }
+  }
+  
+  button {
+    font-size: .9rem;
+    width: 140px;
+    padding: 10px 20px;
+    border: 3px solid white;
+      
+    &:hover {
+      width: 180px;
+    }
+  }
+}
+
+
+@media (max-width: 480px) {
+  .arrow-right-container {
+    margin-top: -50px;
+    padding-block: 0 50px;
+    >img {
+      height: 100px;
+    }
+  }
+
+  .contact-container {
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 100%);
+  }
+
+  h2 {
+    padding: 50px 50px 16px 50px;
+    font-size: 1.4rem;
+  }
+
+  input,
+  textarea {
+    font-size: .7rem;  
+  }
+
+  form {
+    >h3 {
+      font-size: .9rem;
+    }
+    >p {
+      font-size: .7rem;
+    }
+  
+    >.privacy {
+      >div {
+        >input {
+          padding: 0;
+          width: 20px;
+          margin-right: 8px;
+        }
+  
+        >span {
+          font-size: .7rem;
+        }
+      }
+      >span {
+        font-size: .7rem;
+      }
+  
+    }
+  }
+  
+  button {
+    font-size: .7rem;
+    width: 120px;
+    padding: 6px 16px;
+    border: 2px solid white;
+      
+    &:hover {
+      width: 150px;
+    }
+  }
+}
+

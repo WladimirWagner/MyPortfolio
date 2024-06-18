@@ -1,0 +1,27 @@
+<nav>
+  <div>
+    <a href="index.html"><img src="./assets/icons/logo/logo_black.png" alt=""></a>
+
+    <img (click)="toggleMenu()" [class.active]="menuActive" [src]="menuImages[imageIndex]" alt="">
+  </div>
+
+  <div class="off-screen-menu" [class.active]="menuActive">
+    <ul>
+      <li><a href="#aboutMe" (click)="closeMenu()">About me</a></li>
+      <li><a href="#skills" (click)="closeMenu()">My skills</a></li>
+      <li><a href="#portfolio" (click)="closeMenu()">Portfolio</a></li>
+    </ul>
+    <div class="contact-section">
+      <div>
+        <a href="#contact" (click)="closeMenu()"><h2>Say Hi!</h2></a>
+        <a href="mailto:wladimir.lange@protonmail.de" (click)="closeMenu()">wladimir.lange&#64;protonmail.de</a>
+      </div>
+      <div>
+        <a href="https://github.com/WladimirWagner" (click)="closeMenu()"><img src="./assets/icons/socials/git.png" alt="GIT"></a>
+        <a href="mailto:wladimir.lange@protonmail.de" (click)="closeMenu()"><img src="./assets/icons/socials/mail.png" alt="MAIL"></a>
+        <a href="https://www.linkedin.com/in/wladimir-lange-1145012b6/" (click)="closeMenu()"><img src="./assets/icons/socials/linked.png" alt="LINKEDIN"></a>
+      </div>
+    </div>
+  </div>
+</nav>
+

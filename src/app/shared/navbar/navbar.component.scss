@@ -1,0 +1,276 @@
+@use './../../../mixins.scss' as *;
+
+nav {
+  z-index: 500;
+  width: 100%;
+  max-width: 1440px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  >div:nth-child(1) {
+    background-color: $second-color;
+    width: 100%;
+    padding: 24px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    >a {
+      cursor: pointer;
+      >img {
+        height: 60px;
+      }
+    }
+
+    >img {
+      cursor: pointer;
+    }
+  }
+}
+
+a {
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+  }
+}
+
+.off-screen-menu {
+  width: 100%;
+  height: fit-content;
+  max-width: 1440px;
+  background-color: $second-color;
+  display: none;
+  flex-direction: column;
+
+
+  >ul {
+    margin-top: 10%;
+    padding: 0;
+    font-family: 'Syne';
+    font-weight: 700;
+    font-size: 6rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+
+    >li {
+      list-style: none;
+    }
+  }
+}
+
+.contact-section {
+  background-color: black;
+  clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
+  width: 100%;
+  color: $second-color;
+  padding: 50px 16px 16px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  >div:nth-child(1) {
+    padding-bottom: 50px;
+    >a {
+      font-family: 'Overpass';
+      font-size: 1.2rem;
+      color: white;
+      text-decoration: none;
+      >h2 {
+        @include h2-style();
+        color: $second-color;
+        padding-bottom: 50px;
+      }
+    }
+  }
+
+  >div:nth-child(2) {
+    padding-top: 50px;
+    display: flex;
+    gap: 32px;
+
+    >a {
+      &:hover {
+        filter: invert(62%) sepia(17%) saturate(6301%) hue-rotate(1deg) brightness(105%) contrast(103%);
+        transition: all 125ms ease;
+        transform: translateY(-12px);
+      }
+    }
+  }
+  
+}
+
+.off-screen-menu.active {
+  display: flex;
+  justify-content: space-between;
+  height: 93vh;
+}
+
+
+@media (max-width: 1070px) {
+  nav {  
+    >div:nth-child(1) {
+      padding: 24px 16px;
+  
+      >a {
+        cursor: pointer;
+        >img {
+          height: 40px;
+        }
+      }
+  
+      >img {
+        height: 35px;
+        cursor: pointer;
+      }
+    }
+  }
+      
+  .off-screen-menu {
+    justify-content: start;
+  
+    >ul {
+      font-size: 4.5rem;
+      gap: 24px;
+    }
+  }
+  
+  .contact-section {
+    background-color: black;
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
+    width: 100%;
+    color: $second-color;
+    padding: 50px 16px 16px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    >div:nth-child(1) {
+      padding-bottom: 50px;
+      >a {
+        font-family: 'Overpass';
+        font-size: .9rem;
+        color: white;
+        text-decoration: none;
+        >h2 {
+          font-size: 2.5rem;
+          padding-bottom: 30px;
+        }
+      }
+    }
+  
+    >div:nth-child(2) {
+      padding-top: 50px;
+
+  
+      >a {
+        >img {
+          height: 40px;
+        }
+      }
+    }
+    
+  }
+  
+  .off-screen-menu.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 700px) {
+  nav {  
+    >div:nth-child(1) {
+      >a {
+        >img {
+          height: 30px;
+        }
+      }
+  
+      >img {
+        height: 25px;
+      }
+    }
+  }
+      
+  .off-screen-menu {
+    justify-content: start;
+  
+    >ul {
+      font-size: 3.4rem;
+      gap: 24px;
+    }
+  }
+  
+  .contact-section {  
+    >div:nth-child(1) {
+      >a {
+        font-size: .8rem;
+        >h2 {
+          font-size: 2rem;
+        }
+      }
+    }
+  
+    >div:nth-child(2) { 
+      >a {
+        >img {
+          height: 30px;
+        }
+      }
+    }
+    
+  }
+}
+
+@media (max-width: 480px) {
+  nav {  
+    >div:nth-child(1) {
+      >a {
+        >img {
+          height: 25px;
+        }
+      }
+  
+      >img {
+        height: 20px;
+      }
+    }
+  }
+      
+  .off-screen-menu { 
+    >ul {
+      font-size: 3rem;
+      gap: 24px;
+    }
+  }
+  
+  .contact-section {  
+    >div:nth-child(1) {
+      >a {
+        font-size: .6rem;
+        >h2 {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  
+    >div:nth-child(2) { 
+      >a {
+        >img {
+          height: 25px;
+        }
+      }
+    }
+    
+  }
+}
+

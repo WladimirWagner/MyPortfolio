@@ -1,0 +1,59 @@
+@use './../../mixins.scss' as *;
+
+h2 {
+  @include h2-style();
+}
+
+h3 {
+  font-size: 2rem;
+  padding-block: 32px;
+}
+
+.imprint-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 150px;
+  width: 100vw;
+  min-height: calc(100vh - 203px);
+  gap: 32px;
+
+  >div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    >p {
+      font-family: 'Overpass';
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .imprint-container {
+    min-height: calc(100vh - 193px);
+  }
+}
+
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  h3 {
+    font-size: 1rem;
+    padding-block: 32px;
+  }
+  
+  .imprint-container {
+    min-height: calc(100vh - 180px);
+  
+    >div {
+      >p {
+        font-size: .7rem;
+      }
+    }
+  }
+  
+}
