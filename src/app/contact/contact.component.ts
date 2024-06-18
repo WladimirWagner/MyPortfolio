@@ -13,7 +13,7 @@ import { RouterModule } from '@angular/router';
 })
 export class ContactComponent {
 
-  http = inject(HttpClient)
+  http = inject(HttpClient);
   mailTest = true;
   
 

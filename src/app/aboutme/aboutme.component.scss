@@ -59,7 +59,7 @@
     display: flex;
     justify-content: space-between;
     gap: 24px;
-    padding-top: 50px;
+    padding-top: 100px;
   
     >div:nth-child(1) {
       >h2 {
@@ -91,7 +91,6 @@
 @media (max-width: 700px) {
   .aboutme-container {
     gap: 24px;
-    padding-top: 0;
   
     >div:nth-child(1) {
       >h2 {

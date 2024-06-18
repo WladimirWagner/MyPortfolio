@@ -162,6 +162,17 @@ button {
   }
 }
 
+button.disabled-button {
+  background-color: $main-color;
+  cursor: not-allowed;
+
+  &:hover {
+    font-weight: normal;
+    transition: none;
+    width: 220px;
+  }
+}
+
 @media (max-width: 1070px) {
   h2 {
     font-size: 2.5rem;
@@ -245,6 +256,12 @@ button {
       
     &:hover {
       width: 180px;
+    }
+  }
+
+  button.disabled-button {
+    &:hover {
+      width: 140px;
     }
   }
 }
@@ -352,6 +369,12 @@ button {
       
     &:hover {
       width: 150px;
+    }
+  }
+
+  button.disabled-button {
+    &:hover {
+      width: 120px;
     }
   }
 }

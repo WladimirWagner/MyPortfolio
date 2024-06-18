@@ -37,16 +37,14 @@
       <div class="privacy">
         <div>
           <div id="inputPreview">
-            <input id="demo_opt_1" type="checkbox" class="css-checkbox" #privacy="ngModel" [(ngModel)]="formData.privacy" type="checkbox" name="privacy" required>
+            <input id="demo_opt_1" type="checkbox" class="css-checkbox" #privacy="ngModel" [(ngModel)]="formData.privacy" name="privacy" required>
             <label for="demo_opt_1"></label>
           </div>
-          <span>I've read the <a [routerLink]="'/imprint'">privacy policy</a> and agree to the processing of my data as outlined.</span>
+          <span>I've read the <a [routerLink]="'/privacy-policy'">privacy policy</a> and agree to the processing of my data as outlined.</span>
         </div>
-        <span *ngIf="privacy.invalid">Please accept the privacy policy.</span>
-        
+        <span *ngIf="privacy.invalid && (privacy.dirty || privacy.touched)">Please accept the privacy policy.</span>
       </div>
-
-      <button [disabled]="contactForm.invalid">Send message</button>
+      <button [ngClass]="{'disabled-button': contactForm.invalid}" [disabled]="contactForm.invalid">Send message</button>
     </form>
   </div>
 </div>
