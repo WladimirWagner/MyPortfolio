@@ -24,9 +24,24 @@ nav {
         height: 60px;
       }
     }
-
-    >img {
+    >div {
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      >div {
+        font-weight: bold;
+        border-radius: 4px;
+        &:hover {
+          color: $second-color;
+          background-color: black;
+        }
+      }
+
+      >img {
+        cursor: pointer;
+      }
     }
   }
 }
@@ -122,15 +137,15 @@ a {
       padding: 24px 16px;
   
       >a {
-        cursor: pointer;
         >img {
           height: 40px;
         }
       }
-  
-      >img {
-        height: 35px;
-        cursor: pointer;
+      
+      >div {
+        >img {
+          height: 35px;
+        }
       }
     }
   }
@@ -195,8 +210,10 @@ a {
         }
       }
   
-      >img {
-        height: 25px;
+      >div {
+        >img {
+          height: 25px;
+        }
       }
     }
   }
@@ -240,8 +257,10 @@ a {
         }
       }
   
-      >img {
-        height: 20px;
+      >div {
+        >img {
+          height: 20px;
+        }
       }
     }
   }

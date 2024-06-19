@@ -22,13 +22,9 @@ $second-color: #FFFCF3;
   &:hover {
     font-weight: bold;
     transition: all 100ms;
-    
     border: 4px solid $main-color;
     width: 200px;
-
-    >a {
-      color: $main-color;
-    }
+    color: $main-color;
   }
 }
 
@@ -123,6 +119,11 @@ $second-color: #FFFCF3;
 
   >span {
     font-family: 'Overpass';
+  }
+
+  >div {
+    display: flex;
+    gap: 8px;
   }
 }
 

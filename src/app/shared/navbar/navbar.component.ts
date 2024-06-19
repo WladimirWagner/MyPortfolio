@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
@@ -20,6 +21,23 @@ export class NavbarComponent {
     './assets/img/burger/burger_5.png'
   ];
 
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('en');
+    this.translate.addLangs(['en', 'de']);
+
+    //Use english as basic language
+    this.translate.use('en');
+
+    // adjust language to browser language
+
+    // const browserLang = this.translate.getBrowserLang();
+    // this.translate.use(browserLang && browserLang.match(/en|de/) ? browserLang : 'en');
+  }
+
+  switchLanguage(language: string) {
+    this.translate.use(language);
+  }
+
   toggleMenu() {
     if (this.menuActive) {
       this.reverseMenuAnimation();
@@ -32,7 +50,7 @@ export class NavbarComponent {
 
   forwardMenuAnimation() {
     let count = 0;
-    const maxIndex = 4; // Stop at the fifth image (index 4)
+    const maxIndex = 4;
     
     this.animationInterval = setInterval(() => {
       if (count >= maxIndex) {

@@ -1,0 +1,32 @@
+{
+  "HEADER": "Frontend Entwickler",
+
+  "ABOUT ME": "Über mich",
+  "AM TEXT": "Ich bin ein Frontend-Entwickler mit Sitz in Osnabrück, Deutschland. Ich helfe Designern und Unternehmen dabei, ihre Ideen in die Realität umzusetzen. Kreativität und logisches Denken sind Fähigkeiten, die ich entwickelt habe, um Ideen in Qualitätsprodukte umzusetzen.",
+  "AM TEXT 2": " Wenn Sie glauben, dass ich gut zu Ihren Projekten passen würde, kontaktieren Sie mich!",
+  "AM BTN": "Kontakt",
+
+
+  "PF SUBHEADER": "Probieren Sie gerne meine neuesten Entwicklungsprojekte aus und schauen Sie sich deren Code an.",
+  "PF PROJECT TEXT 1": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+  "PF PROJECT TEXT 2": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+  "PF PROJECT TEXT 3": "Based on the PokeAPI a simple library that provides and catalogues pokemon information.",
+
+
+  "SAY HI": "Sag Hi!",
+  "CONTACT HEADER": "Möchten Sie ein neues Projekt besprechen?",
+  "CONTACT SUBHEADER": "Lassen Sie uns Ihre Idee besprechen und sie in die Tat umsetzen",
+  "CONTACT NAME": "Ihr Name",
+  "FORM NAME": "Ihr Name ist erforderlich",
+  "CONTACT MAIL": "Ihre Email",
+  "FORM MAIL": "Ihre Email is erforderlich",
+  "CONTACT MESSAGE": "Ihre Nachricht",
+  "FORM MESSAGE": "Ihre Nachricht ist leer",
+  "CONTACT PRIVACY 1": "Ich habe die",
+  "CONTACT PRIVACY 2": "Datenschutzerklärung",
+  "CONTACT PRIVACY 3": "gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.",
+  "FORM PRIVACY": "Bitte akzeptieren Sie die Datenschutzerklärung.",
+  "CONTACT BTN": "Senden",
+
+  "IMPRINT": "Impressum"
+}

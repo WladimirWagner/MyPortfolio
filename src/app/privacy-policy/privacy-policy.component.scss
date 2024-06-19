@@ -9,6 +9,10 @@ h3 {
   padding-block: 32px;
 }
 
+a {
+  color: $main-color;
+}
+
 .privacy-container {
   padding: 150px 100px;
   display: flex;
@@ -19,10 +23,19 @@ h3 {
   >div {
     display: flex;
     flex-direction: column;
-    align-items: center;
+
     >p {
+      font-family: 'Overpass';
     }
   }
+}
+
+.info-arrow {
+  border-radius: 50%;
+  position: fixed;
+  top: 16%;
+  right: 3%;
+  height: 20px;
 }
 
 @media (max-width: 1310px) {
@@ -36,6 +49,10 @@ h3 {
     font-size: 2.5rem;
   }
 
+  h3 {
+    font-size: 1.2rem;
+  }
+
   .privacy-containert {
     padding: 150px 16px;
   }
@@ -44,6 +61,10 @@ h3 {
 @media (max-width: 480px) {
   h2 {
     font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1rem;
   }
 
   .privacy-container {
