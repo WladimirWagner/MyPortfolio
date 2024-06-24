@@ -1,6 +1,6 @@
-<div class="arrow-left-container"><img src="./assets/img/arrow/arrow_diag_down/arrow_d_right._0.png" alt="" id="portfolio"></div>
+<div class="arrow-left-container"><img src="./assets/img/arrow/arrow_diag_down/arrow_d_right._0.png" alt=""></div>
 
-<div class="portfolio-header-container" >
+<div class="portfolio-header-container" id="portfolio">
   <h2>Portfolio</h2>
   <h3>{{ 'PF SUBHEADER' | translate }}</h3>
 </div>
@@ -12,7 +12,7 @@
     <span class="project-count" [ngClass]="{'even': i % 2 === 0, 'odd': i % 2 !== 0}">0{{ i+1 }}/0{{ portfolio.length }}</span>
     
     <div class="project-img-container" >
-      <img src="{{ project.img }}" alt="PROJECT">
+      <img [src]="project.img" alt="PROJECT">
       <img [ngClass]="{'even': i % 2 === 0, 'odd': i % 2 !== 0}" src="./assets/img/projects/img_effects/rectangle.png" alt="RECTANGLE">
       <img [ngClass]="{'even': i % 2 === 0, 'odd': i % 2 !== 0}" src="./assets/img/projects/img_effects/arrow_small.png" alt="CIRCLE">
     </div>
@@ -24,8 +24,8 @@
           <h4>{{ project.stack }}</h4>
           <span>{{ getDescription(project) }}</span>
           <div>
-            <a href="{{ project.testlink }}"><button>Test</button></a>
-            <a href="{{ project.gitlink }}"><button>Git</button></a>
+            <a [href]="project.testlink"><button>Test</button></a>
+            <a [href]="project.gitlink"><button>Git</button></a>
           </div>
         </div>
     </div>

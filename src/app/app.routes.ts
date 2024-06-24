@@ -1,6 +1,5 @@
-import { Routes, RouterModule } from '@angular/router';
+import { Routes } from '@angular/router';
 import { ImprintComponent } from './imprint/imprint.component';
-import { AppComponent } from './app.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { MainPageComponent } from './main-page/main-page.component';
 

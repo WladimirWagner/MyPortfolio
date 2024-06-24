@@ -37,7 +37,7 @@
 .second-container {
   display: flex;
   justify-content: space-between;
-  padding-top: 140px;
+  padding-block: 140px;
   font-size: 1.3rem;
   font-family: 'Overpass';
   font-weight: 300;
@@ -62,7 +62,7 @@
 
 @media (max-width: 1070px) {
   .landingpage-container {
-    padding-top: 0px;
+    padding-block: 0px;
     height: 100vh;
     justify-content: center;
     gap: 160px;
