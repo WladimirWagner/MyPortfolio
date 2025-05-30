@@ -13,15 +13,15 @@ export class SkillsComponent {
   image!: string;
   
   skillIcons: { name: string, src: string }[] = [
-    { name: 'Angular', src: './assets/icons/skills/angular.png' },
-    { name: 'TypeScript', src: './assets/icons/skills/typescript.png' },
-    { name: 'JavaScript', src: './assets/icons/skills/javascript.png' },
-    { name: 'HTML', src: './assets/icons/skills/html.png' },
-    { name: 'CSS', src: './assets/icons/skills/css.png' },
-    { name: 'Firebase', src: './assets/icons/skills/firebase.png' },
-    { name: 'Git', src: './assets/icons/skills/git.png' },
-    { name: 'Scrum', src: './assets/icons/skills/scrum.png' },
-    { name: 'REST-API', src: './assets/icons/skills/api.png' },
-    { name: 'Material Design', src: './assets/icons/skills/material.png' }
+    { name: 'Next.js', src: './assets/icons/skills/icons8-nextjs-96.png' },
+    { name: 'React', src: './assets/icons/skills/icons8-react-96.png' },
+    { name: 'Angular', src: './assets/icons/skills/icons8-angular-96.png' },
+    { name: 'TypeScript', src: './assets/icons/skills/icons8-typescript-96.png' },
+    { name: 'JavaScript', src: './assets/icons/skills/icons8-javascript-96.png' },
+    { name: 'Supabase', src: './assets/icons/skills/icons8-supabase-96.png' },
+    { name: 'Git', src: './assets/icons/skills/icons8-git-96.png' },
+    { name: 'HTML', src: './assets/icons/skills/icons8-html-5-96.png' },
+    { name: 'CSS', src: './assets/icons/skills/icons8-css3-96.png' },
+    { name: 'Tailwind', src: './assets/icons/skills/icons8-tailwind-css-96.png' }
   ];
 }

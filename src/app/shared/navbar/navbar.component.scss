@@ -1,7 +1,7 @@
 @use './../../../mixins.scss' as *;
 
 nav {
-  z-index: 500;
+  z-index: 1000;
   width: 100%;
   max-width: 1440px;
   position: fixed;
@@ -17,6 +17,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 1001;
 
     >a {
       cursor: pointer;
@@ -28,11 +30,12 @@ nav {
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 1rem;
 
       >div {
         font-weight: bold;
         border-radius: 4px;
+        padding: 0.3rem;
         &:hover {
           color: $second-color;
           background-color: black;
@@ -40,6 +43,7 @@ nav {
       }
 
       >img {
+        margin-left: 1rem;
         cursor: pointer;
       }
     }
@@ -62,9 +66,23 @@ a {
   height: fit-content;
   max-width: 1440px;
   background-color: $second-color;
-  display: none;
+  position: absolute;
+  top: 108px;
+  transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, visibility 0.3s, opacity 0.3s;
+  display: flex;
   flex-direction: column;
+  z-index: 999;
 
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    justify-content: space-between;
+    height: 93vh;
+  }
 
   >ul {
     margin-top: 10%;
@@ -124,13 +142,6 @@ a {
   
 }
 
-.off-screen-menu.active {
-  display: flex;
-  justify-content: space-between;
-  height: 93vh;
-}
-
-
 @media (max-width: 1070px) {
   nav {  
     >div:nth-child(1) {
@@ -151,11 +162,11 @@ a {
   }
       
   .off-screen-menu {
+    top: 88px;
     justify-content: start;
   
-    >ul {
-      font-size: 4.5rem;
-      gap: 24px;
+    &.active {
+      height: calc(100vh - 88px);
     }
   }
   
@@ -217,34 +228,19 @@ a {
       }
     }
   }
-      
+
   .off-screen-menu {
+    top: 78px;
     justify-content: start;
-  
+
+    &.active {
+      height: calc(100vh - 78px);
+    }
+
     >ul {
-      font-size: 3.4rem;
-      gap: 24px;
+      font-size: 2.5rem;
+      gap: 16px;
     }
-  }
-  
-  .contact-section {  
-    >div:nth-child(1) {
-      >a {
-        font-size: .8rem;
-        >h2 {
-          font-size: 2rem;
-        }
-      }
-    }
-  
-    >div:nth-child(2) { 
-      >a {
-        >img {
-          height: 30px;
-        }
-      }
-    }
-    
   }
 }
 
@@ -264,32 +260,19 @@ a {
       }
     }
   }
-      
-  .off-screen-menu { 
+
+  .off-screen-menu {
+    top: 73px;
+    justify-content: start;
+
+    &.active {
+      height: calc(100vh - 73px);
+    }
+
     >ul {
-      font-size: 3rem;
-      gap: 24px;
+      font-size: 2rem;
+      gap: 12px;
     }
-  }
-  
-  .contact-section {  
-    >div:nth-child(1) {
-      >a {
-        font-size: .6rem;
-        >h2 {
-          font-size: 1.4rem;
-        }
-      }
-    }
-  
-    >div:nth-child(2) { 
-      >a {
-        >img {
-          height: 25px;
-        }
-      }
-    }
-    
   }
 }
 

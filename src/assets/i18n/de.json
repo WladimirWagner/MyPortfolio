@@ -1,16 +1,15 @@
 {
   "HEADER": "Frontend Entwickler",
 
-  "ABOUT ME": "Über mich",
   "AM TEXT": "Ich bin ein Frontend-Entwickler mit Sitz in Osnabrück, Deutschland. Ich helfe Designern und Unternehmen dabei, ihre Ideen in die Realität umzusetzen. Kreativität und logisches Denken sind Fähigkeiten, die ich entwickelt habe, um Ideen in Qualitätsprodukte umzusetzen.",
   "AM TEXT 2": " Wenn Sie glauben, dass ich gut zu Ihren Projekten passen würde, kontaktieren Sie mich!",
   "AM BTN": "Kontakt",
 
 
-  "PF SUBHEADER": "Probieren Sie gerne meine neuesten Entwicklungsprojekte aus und schauen Sie sich deren Code an.",
-  "PF PROJECT TEXT 1": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-  "PF PROJECT TEXT 2": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-  "PF PROJECT TEXT 3": "Based on the PokeAPI a simple library that provides and catalogues pokemon information.",
+  "PF SUBHEADER": "Probieren Sie gerne meine neuesten Entwicklungsprojekte aus und schauen Sie sich den Code an.",
+  "PF PROJECT TEXT 1": "Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben, weisen Sie Benutzer und Kategorien zu.",
+  "PF PROJECT TEXT 2": "Spiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.",
+  "PF PROJECT TEXT 3": "Basierend auf der PokeAPI, einer einfachen Bibliothek, die Pokemon-Informationen bereitstellt und katalogisiert.",
 
 
   "SAY HI": "Sag Hi!",

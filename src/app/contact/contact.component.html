@@ -17,7 +17,7 @@
       </div>
 
       <div class="input-field">
-        <input #email="ngModel" [(ngModel)]="formData.email" name="email" type="email" placeholder="{{ 'CONTACT MAIL' | translate }}" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+        <input #email="ngModel" [(ngModel)]="formData.email" name="email" type="email" placeholder="{{ 'CONTACT MAIL' | translate }}" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}">
         <div>
           <span *ngIf="email.invalid && (email.dirty || email.touched)">{{ 'FORM MAIL' | translate }}</span>
           <img src="./assets/icons/form/right.png" alt="RIGHT" *ngIf="email.valid">

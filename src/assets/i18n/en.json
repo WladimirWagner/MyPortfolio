@@ -1,14 +1,13 @@
 {
   "HEADER": "Frontend Developer",
 
-  "ABOUT ME": "About me",
-  "AM TEXT": "I am a Front-end deverloper based in Osnabrück, Germany. I help designers and companies to bring  their ideas to real life.  Creativity and logical thinking are skills that I have developed to connect ideas into quality products.",
+  "AM TEXT": "I am a Frontend developer based in Osnabrück, Germany. I help designers and companies to bring  their ideas to real life.  Creativity and logical thinking are skills that I have developed to connect ideas into quality products.",
   "AM TEXT 2": "If you think I'd be a good match for your projects, contact me!",
   "AM BTN": "Let's talk",
 
   "PF SUBHEADER": "Feel free to try out my latest development projects and look into their code.",
   "PF PROJECT TEXT 1": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-  "PF PROJECT TEXT 2": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+  "PF PROJECT TEXT 2": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
   "PF PROJECT TEXT 3": "Based on the PokeAPI a simple library that provides and catalogues pokemon information.",
 
 

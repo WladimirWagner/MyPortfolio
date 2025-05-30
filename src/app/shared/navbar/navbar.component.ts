@@ -26,12 +26,8 @@ export class NavbarComponent {
     this.translate.addLangs(['en', 'de']);
 
     //Use english as basic language
-    this.translate.use('en');
+    this.translate.use('de');
 
-    // adjust language to browser language
-
-    // const browserLang = this.translate.getBrowserLang();
-    // this.translate.use(browserLang && browserLang.match(/en|de/) ? browserLang : 'en');
   }
 
   switchLanguage(language: string) {

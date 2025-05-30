@@ -3,6 +3,7 @@
   box-sizing: border-box;
   font-family: 'Syne', sans-serif;
   scroll-behavior: smooth;
+  scroll-padding-top: 140px;
 }
 
 body {
@@ -98,10 +99,6 @@ button {
 }
 
 @media (max-width: 1070px) {
-  * {
-    scroll-padding-top: 110px;
-  }
-
   button {
     font-size: 1.1rem;
     font-weight: 400;
